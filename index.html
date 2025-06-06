@@ -658,79 +658,498 @@
             margin-bottom: 1.5rem;
         }
 
-        /* Enhanced CTA Section */
-        .cta-section {
-            height: 100vh;
-            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
+        /* Testimonials Section */
+        .testimonials-section {
+            background: #f8f9fa;
+            padding: 6rem 2rem;
         }
 
-        .cta-content {
+        .testimonials-container {
+            max-width: 1200px;
+            margin: 0 auto;
             text-align: center;
-            max-width: 900px;
-            padding: 0 2rem;
         }
 
-        .cta-title {
+        .testimonials-main-title {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(3rem, 8vw, 8rem);
-            font-weight: 300;
-            letter-spacing: 0.05em;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 400;
+            margin-bottom: 4rem;
             color: #000000;
-            margin-bottom: 2rem;
-            line-height: 1;
-            text-transform: uppercase;
         }
 
-        .cta-subtitle {
-            font-size: 1.25rem;
-            font-weight: 300;
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            text-align: left;
+        }
+
+        .testimonial-card {
+            background: #ffffff;
+            padding: 2rem;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-quote {
+            font-size: 1rem;
+            line-height: 1.7;
             color: rgba(0, 0, 0, 0.8);
-            margin-bottom: 3rem;
-            letter-spacing: 0.1em;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .testimonial-author-info h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #000000;
+            margin-bottom: 0.25rem;
+        }
+
+        .testimonial-company {
+            font-size: 0.9rem;
+            color: rgba(0, 0, 0, 0.6);
+        }
+
+        .testimonial-logo {
+            max-width: 80px;
+            max-height: 40px;
+            opacity: 0.7;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background: #ffffff;
+            padding: 6rem 2rem;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 400;
+            margin-bottom: 4rem;
+            color: #000000;
+            text-align: center;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+        }
+
+        .faq-question {
+            background: none;
+            border: none;
+            width: 100%;
+            text-align: left;
+            padding: 1.5rem 0;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #000000;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            color: rgba(0, 0, 0, 0.7);
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.active::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            padding: 0 0 0 0;
+        }
+
+        .faq-answer.active {
+            max-height: 300px;
+            padding: 0 0 1.5rem 0;
+        }
+
+        .faq-answer p {
+            color: rgba(0, 0, 0, 0.8);
             line-height: 1.6;
         }
 
-        .cta-button {
+        .faq-answer ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .faq-answer li {
+            color: rgba(0, 0, 0, 0.8);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Booking Form Section */
+        .booking-section {
+            background: #f8f9fa;
+            padding: 6rem 2rem;
+        }
+
+        .booking-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .booking-main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 400;
+            margin-bottom: 2rem;
+            color: #000000;
+        }
+
+        .booking-subtitle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 3rem;
+            font-weight: 500;
+            color: #000000;
+        }
+
+        .booking-form {
+            background: #ffffff;
+            padding: 3rem;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #000000;
+        }
+
+        .form-label.required::after {
+            content: ' *';
+            color: #dc3545;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #000000;
+        }
+
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .checkbox-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 0.5rem;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .form-checkbox {
+            margin: 0;
+        }
+
+        .form-submit {
             background: #000000;
             color: #ffffff;
-            padding: 1.5rem 3rem;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 4px;
             font-size: 1rem;
             font-weight: 500;
             letter-spacing: 0.1em;
             text-transform: uppercase;
-            border: none;
             cursor: pointer;
             transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
             width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-            transition: left 0.6s ease;
         }
 
-        .cta-button:hover::before {
-            left: 100%;
+        .form-submit:hover {
+            background: rgba(0, 0, 0, 0.8);
+            transform: translateY(-2px);
+        }
+
+        /* Location Section */
+        .location-section {
+            background: #ffffff;
+            padding: 6rem 2rem;
+        }
+
+        .location-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .location-main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 400;
+            margin-bottom: 4rem;
+            color: #000000;
+            text-align: center;
+        }
+
+        .location-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .location-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .location-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #000000;
+            margin-bottom: 1.5rem;
+        }
+
+        .location-card p {
+            color: rgba(0, 0, 0, 0.8);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .location-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .location-card li {
+            color: rgba(0, 0, 0, 0.8);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .location-card a {
+            color: #000000;
+            text-decoration: underline;
+        }
+
+        .location-card a:hover {
+            color: rgba(0, 0, 0, 0.7);
+        }
+
+        .metro-icon {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        .metro-a { background: #00a562; }
+        .metro-b { background: #ffcd00; color: #000; }
+        .metro-c { background: #e41e26; }
+
+        /* Enhanced Contact Section */
+        .enhanced-contact-section {
+            background: #f8f9fa;
+            padding: 6rem 2rem;
+        }
+
+        .enhanced-contact-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .enhanced-contact-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 400;
+            margin-bottom: 4rem;
+            color: #000000;
+            text-align: center;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .contact-photo {
+            text-align: center;
+        }
+
+        .contact-photo img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+
+        .contact-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #000000;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-role {
+            color: rgba(0, 0, 0, 0.6);
+            font-style: italic;
+        }
+
+        .contact-details h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: #000000;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-item a {
+            color: #000000;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        .company-info {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .company-info p {
+            color: rgba(0, 0, 0, 0.7);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Enhanced CTA Section */
+        .cta-section {
+            background: #000000;
+            color: #ffffff;
+            text-align: center;
+            padding: 6rem 2rem;
+        }
+
+        .cta-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+
+        .cta-subtitle {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            background: #ffffff;
+            color: #000000;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-radius: 4px;
         }
 
         .cta-button:hover {
-            background: rgba(0, 0, 0, 0.8);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            background: #f0f0f0;
+            transform: translateY(-3px);
+        }
+
+        .company-footer {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
         }
 
         /* Footer */
@@ -1045,6 +1464,122 @@
                 line-height: 1.6;
             }
 
+            /* Testimonials Section */
+            .testimonials-section {
+                padding: 4rem 1rem;
+            }
+
+            .testimonials-main-title {
+                font-size: clamp(2rem, 8vw, 3rem);
+                margin-bottom: 3rem;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .testimonial-card {
+                padding: 1.5rem;
+            }
+
+            .testimonial-author {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            /* FAQ Section */
+            .faq-section {
+                padding: 4rem 1rem;
+            }
+
+            .faq-main-title {
+                font-size: clamp(2rem, 8vw, 3rem);
+                margin-bottom: 3rem;
+            }
+
+            .faq-question {
+                font-size: 1rem;
+                padding: 1rem 0;
+            }
+
+            /* Booking Section */
+            .booking-section {
+                padding: 4rem 1rem;
+            }
+
+            .booking-main-title {
+                font-size: clamp(2rem, 8vw, 3rem);
+                margin-bottom: 2rem;
+            }
+
+            .booking-form {
+                padding: 2rem 1rem;
+            }
+
+            .checkbox-group {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            /* Location Section */
+            .location-section {
+                padding: 4rem 1rem;
+            }
+
+            .location-main-title {
+                font-size: clamp(2rem, 8vw, 3rem);
+                margin-bottom: 3rem;
+            }
+
+            .location-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .location-card {
+                padding: 1.5rem;
+            }
+
+            /* Enhanced Contact Section */
+            .enhanced-contact-section {
+                padding: 4rem 1rem;
+            }
+
+            .enhanced-contact-title {
+                font-size: clamp(2rem, 8vw, 3rem);
+                margin-bottom: 3rem;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .contact-photo img {
+                width: 150px;
+                height: 150px;
+            }
+
+            .contact-details {
+                text-align: left;
+            }
+
+            /* CTA Section */
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .cta-button {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+
             /* CTA Section */
             .cta-section {
                 height: 80vh;
@@ -1187,10 +1722,11 @@
         <div class="nav-center">
             <a href="#spaces-showcase" class="nav-link">Prostory</a>
             <a href="#services-section" class="nav-link">Služby</a>
-            <a href="#heritage" class="nav-link">O nás</a>
-            <a href="#contact-footer" class="nav-link">Kontakt</a>
+            <a href="#testimonials-section" class="nav-link">Reference</a>
+            <a href="#location-section" class="nav-link">Lokalita</a>
+            <a href="#enhanced-contact-section" class="nav-link">Kontakt</a>
         </div>
-        <a href="#contact-footer" class="nav-cta">Ověřit dostupnost</a>
+        <a href="#booking-section" class="nav-cta">Ověřit dostupnost</a>
         <div class="mobile-menu-toggle" id="mobileMenuToggle">
             <span></span>
             <span></span>
@@ -1201,9 +1737,10 @@
     <div class="mobile-menu" id="mobileMenu">
         <a href="#spaces-showcase" class="mobile-menu-link">Prostory</a>
         <a href="#services-section" class="mobile-menu-link">Služby</a>
-        <a href="#heritage" class="mobile-menu-link">O nás</a>
-        <a href="#contact-footer" class="mobile-menu-link">Kontakt</a>
-        <a href="#contact-footer" class="mobile-menu-link" style="margin-top: 2rem; border: 1px solid rgba(0,0,0,0.3); padding: 1rem 2rem;">Ověřit dostupnost</a>
+        <a href="#testimonials-section" class="mobile-menu-link">Reference</a>
+        <a href="#location-section" class="mobile-menu-link">Lokalita</a>
+        <a href="#enhanced-contact-section" class="mobile-menu-link">Kontakt</a>
+        <a href="#booking-section" class="mobile-menu-link" style="margin-top: 2rem; border: 1px solid rgba(0,0,0,0.3); padding: 1rem 2rem;">Ověřit dostupnost</a>
     </div>
 
     <section class="hero" id="hero">
@@ -1315,6 +1852,256 @@
         </div>
     </section>
 
+    <section class="testimonials-section" id="testimonials-section">
+        <div class="testimonials-container">
+            <h2 class="testimonials-main-title">Řekli o nás</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        "K našemu každoročnímu boardmeetingu jsme si nemohli vybrat lepší místo než prostory v Zasedáme.cz na Václavském náměstí. Děkuji hlavně panu Chmelovi za perfektní spolupráci a uspořádání celého boardmeetingu dle našich požadavků na míru. Všichni zúčastnění byli velmi spokojeni. Připravení prostor, technická vybavenost i jídlo bylo výborné."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-author-info">
+                            <h4>Petra Hrouzková</h4>
+                            <div class="testimonial-company">Aloka Properties</div>
+                        </div>
+                        <div class="testimonial-logo">
+                            <span style="color: #e74c3c; font-weight: bold;">ALOKA</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        "Vše proběhlo podle představ. Krásná lokalita a unikátní výhled. Velké díky Šimonovi, který zajistil hladký průběh akce. Doporučuji."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-author-info">
+                            <h4>Jakub Malík</h4>
+                            <div class="testimonial-company">Growth Club</div>
+                        </div>
+                        <div class="testimonial-logo">
+                            <span style="color: #2c3e50; font-weight: bold;">GC</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        "Prostory od Zasedáme.cz rozhodně doporučuji - výborná pozice v centru města, příjemné prostředí, kompletní zázemí pro účastníky, k dispozici všechno technické vybavení. Zajistí catering na míru, poradí a pomůžou, výborná komunikace, není problém prohlédnout si prostory před akcí. Velké díky Šimonovi za vstřícnost :)"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-author-info">
+                            <h4>Eva Dvořáková</h4>
+                            <div class="testimonial-company">AddTex</div>
+                        </div>
+                        <div class="testimonial-logo">
+                            <span style="color: #3498db; font-weight: bold;">AddTex</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section" id="faq-section">
+        <div class="faq-container">
+            <h2 class="faq-main-title">Často se nás ptáte</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Můžeme si zajistit vlastní catering?
+                    </button>
+                    <div class="faq-answer">
+                        <p>Rádi vám nabídneme catering od našich partnerů. Máte-li však vlastní catering, rádi vám vyjdeme vstříc. V takovém případě účtujeme poplatek 990 Kč za zapůjčení nádobí, souvisejícího vybavení a za úklid.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        V jakých časech je možnost si prostory pronajmout?
+                    </button>
+                    <div class="faq-answer">
+                        <p>Většina klientů si rezervuje prostor mezi 9:00 až 18:00. Rádi Vám ale vyjdeme vstříc a prostor Vám pronajmeme i dříve nebo naopak uspořádáme večerní akci s koncem ve 23:00.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Jaké jsou storno podmínky, pokud pronájem potřebuji zrušit?
+                    </button>
+                    <div class="faq-answer">
+                        <p>Při zrušení pronájmu aplikujeme tyto storno poplatky:</p>
+                        <ul>
+                            <li>Zrušení 31 dní a více před domluveným termínem: Žádný storno poplatek.</li>
+                            <li>Zrušení 15-30 dní před domluveným termínem: Storno poplatek 30 % z celkové ceny pronájmu.</li>
+                            <li>Zrušení 14-8 dní před domluveným termínem: Storno poplatek 50 % z celkové ceny pronájmu.</li>
+                            <li>Zrušení 7 dní a méně před domluveným termínem: Storno poplatek 100 % z celkové ceny pronájmu.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Můžeme dorazit i dříve před začátkem pronájmu či zůstat déle?
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ano, na přípravu akce dáváme 30 minut před jejím začátkem. Po ukončení akce byste nám měli předat prostor do 30 minut.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="booking-section" id="booking-section">
+        <div class="booking-container">
+            <h2 class="booking-main-title">Ověřte si dostupnost termínu</h2>
+            <div class="booking-subtitle">
+                <span>✓</span>
+                <strong>Reagujeme do 24 hodin.</strong>
+            </div>
+            <form class="booking-form" id="bookingForm">
+                <div class="form-group">
+                    <label class="form-label required" for="date">Datum</label>
+                    <input type="date" id="date" name="date" class="form-input" required>
+                    <small style="margin-top: 0.5rem; display: block;">
+                        <a href="#" onclick="toggleMultipleDays(); return false;">Chci si rezervovat prostor na více dnů</a>
+                    </small>
+                </div>
+                
+                <div class="form-group" id="multiple-days" style="display: none;">
+                    <label class="form-label" for="additional-days">Další dny rezervace</label>
+                    <textarea id="additional-days" name="additional-days" class="form-input form-textarea" placeholder="Uveďte další termíny..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label required" for="time">Čas od kdy do kdy</label>
+                    <input type="text" id="time" name="time" class="form-input" placeholder="např. 9:00 - 17:00" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Výběr prostoru</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="large-space" name="space" value="Velký prostor" class="form-checkbox">
+                            <label for="large-space">Velký prostor</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="medium-space" name="space" value="Střední prostor" class="form-checkbox">
+                            <label for="medium-space">Střední prostor</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="small-space" name="space" value="Malý prostor" class="form-checkbox">
+                            <label for="small-space">Malý prostor</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="requirements">Vaše dotazy či speciální přání</label>
+                    <textarea id="requirements" name="requirements" class="form-input form-textarea" placeholder="Popište své požadavky..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label required" for="name">Jméno</label>
+                    <input type="text" id="name" name="name" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label required" for="email">E-mail</label>
+                    <input type="email" id="email" name="email" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label required" for="phone">Telefon</label>
+                    <input type="tel" id="phone" name="phone" class="form-input" required>
+                </div>
+
+                <button type="submit" class="form-submit">ODESLAT POPTÁVKU</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="location-section" id="location-section">
+        <div class="location-container">
+            <h2 class="location-main-title">Kde nás najdete</h2>
+            <div class="location-grid">
+                <div class="location-card">
+                    <h3>Naše adresa</h3>
+                    <p>
+                        Baťův palác, 7. patro (8. podlaží)<br>
+                        Václavské náměstí 6<br>
+                        110 00 Praha 1 - Nové Město, Česko
+                    </p>
+                    
+                    <h4>Odkazy na mapy</h4>
+                    <ul>
+                        <li><a href="https://maps.app.goo.gl/Toana4kcVAZBeaSdA" target="_blank">🗺️ maps.google.com</a></li>
+                        <li><a href="https://mapy.com/s/jusucezele" target="_blank">🗺️ www.mapy.cz</a></li>
+                    </ul>
+
+                    <h4>Kam na oběd</h4>
+                    <ul style="font-size: 0.9rem;">
+                        <li><a href="#" target="_blank">🍽️ Restaurace Tiskárna Národní</a></li>
+                        <li><a href="#" target="_blank">🍽️ Restaurace U Pinkasů</a></li>
+                        <li><a href="#" target="_blank">🍽️ Restaurace Výtopna</a></li>
+                        <li><a href="#" target="_blank">🍕 Pizza Coloseum Václavka</a></li>
+                        <li><a href="#" target="_blank">🥪 Modrý zub Jindřišská</a></li>
+                    </ul>
+                    <p style="font-style: italic; margin-top: 1rem;">Vše v pěším dosahu.</p>
+                </div>
+
+                <div class="location-card">
+                    <h3>Hromadná doprava</h3>
+                    <ul>
+                        <li><span class="metro-icon metro-a">A</span> Metro A: Můstek</li>
+                        <li><span class="metro-icon metro-b">B</span> Metro B: Můstek</li>
+                        <li><span class="metro-icon metro-c">C</span> Metro C: Muzeum</li>
+                        <li>🚋 Tramvaj: Václavské náměstí</li>
+                    </ul>
+
+                    <h4>Parkování</h4>
+                    <ul style="font-size: 0.9rem;">
+                        <li><a href="#" target="_blank">🅿️ MR.PARKIT - Parking Panská 2</a> (5 min pěšky)</li>
+                        <li><a href="#" target="_blank">🅿️ Parkování Opletalova</a> (9 min pěšky)</li>
+                        <li><a href="#" target="_blank">🅿️ Parking Senovážné Square</a> (9 min pěšky)</li>
+                        <li><a href="#" target="_blank">🅿️ MR.PARKIT - Parking Spálená 29</a> (10 min pěšky)</li>
+                        <li><a href="#" target="_blank">🅿️ Parkoviště Wilsonova</a> (11 min pěšky)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="enhanced-contact-section" id="enhanced-contact-section">
+        <div class="enhanced-contact-container">
+            <h2 class="enhanced-contact-title">Kontakt</h2>
+            <div class="contact-content">
+                <div class="contact-photo">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" alt="Šimon Chmel - Manažer projektu">
+                    <div class="contact-name">Šimon Chmel</div>
+                    <div class="contact-role">Manažer projektu</div>
+                </div>
+                <div class="contact-details">
+                    <h4>Kontaktní informace</h4>
+                    <div class="contact-item">
+                        <span>✉️</span>
+                        <a href="mailto:info@zasedame.cz">info@zasedame.cz</a>
+                    </div>
+                    <div class="contact-item">
+                        <span>📞</span>
+                        <a href="tel:+420728340823">+420 728 340 823</a>
+                    </div>
+                    <div class="contact-item">
+                        <span>💬</span>
+                        <a href="https://api.whatsapp.com/send?phone=420728340823">WhatsApp</a>
+                    </div>
+                    
+                    <div class="company-info">
+                        <p><strong>Provozovatel:</strong> Zasedáme.cz, s.r.o.</p>
+                        <p>IČ: 21896615, DIČ: CZ21896615</p>
+                        <p>Bankovní účet: 2302951994/2010</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="heritage-section" id="heritage">
         <div class="heritage-container">
             <div class="heritage-timeline" id="heritage-timeline">
@@ -1362,20 +2149,18 @@
         </div>
     </section>
     
-    <footer class="contact-footer" id="contact-footer">
-        <h2>Ověřte si dostupnost</h2>
-        <p>Kontaktujte nás pro nezávaznou konzultaci a prohlídku prostor.</p>
-        <div style="margin: 2rem 0;">
-            <p style="font-size: 1.25rem; margin: 1rem 0;">
-                <strong>📞 +420 728 340 823</strong>
-            </p>
-            <p style="font-size: 1.25rem; margin: 1rem 0;">
-                <strong>✉️ info@zasedame.cz</strong>
-            </p>
-        </div>
-        <a href="tel:+420728340823" class="cta-button">Zavolejte nyní</a>
-        <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2); font-size: 0.9rem; color: rgba(255,255,255,0.6);">
-            <p>Zasedáme.cz, s.r.o. | Václavské náměstí 6, Praha 1</p>
+    
+    <footer class="cta-section" id="contact-footer">
+        <div class="cta-content">
+            <h2 class="cta-title">Ověřte si dostupnost a přijďte se k nám podívat!</h2>
+            <p class="cta-subtitle">Zavolejte nebo napište nám a dozvíte se aktuální možnosti pronájmu našich zasedacích prostor. Rádi Vás také uvítáme na nezávazné prohlídce.</p>
+            <div class="cta-buttons">
+                <a href="tel:+420728340823" class="cta-button">+420 728 340 823</a>
+                <a href="mailto:info@zasedame.cz" class="cta-button">info@zasedame.cz</a>
+            </div>
+            <div class="company-footer">
+                <p>Zasedáme.cz, s.r.o. | Václavské náměstí 6, Praha 1</p>
+            </div>
         </div>
     </footer>
 
